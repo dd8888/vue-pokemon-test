@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue JS</title>
+    <script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
+    <script defer src="index.js"></script>
+    <style>
+      h1 {
+        background-color: green;
+        color: white;
+        border: 1px solid black;
+        box-shadow: 2px 2px 5px grey;
+        border-radius: 5px;
+        width: 75px;
+        font-size: 1em;
+        text-transform: capitalize;
+        margin: 3px;
+      }
+      .height {
+        background-color: blue;
+        color: white;
+        padding: 0 10px;
+      }
+      .weight {
+        background-color: red;
+        color: white;
+        padding: 0 10px;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 128px;
+        border: 2px solid black;
+        box-shadow: 0 0 5px #666 inset;
+      }
+      img {
+        width: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <h1>{{name}}</h1>
+        <img :src="imgUrl" :alt="name" />
+        <span class="weight">{{weight}}</span>
+        <span class="height">{{height}}</span>
+        <span class="type" v-for="(type, index) in types" :key="index"
+          >{{type.type.name}}</span
+        >
+      </div>
+    </div>
+  </body>
+</html>
